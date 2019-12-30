@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>Example - Increase/Decrease Text Size Using Javascript</title>
+		
+		<style type="text/css">
+		
+		p {
+			font-family: Arial, sans-serif;
+			font-size: 12px;
+		}
+		
+		</style>
+		
+		<script type="text/javascript">
+		
+			var min=8;
+			var max=18;
+			function increaseFontSize() {
+			   var p = document.getElementsByTagName('p');
+			   for(i=0;i<p.length;i++) {
+			      if(p[i].style.fontSize) {
+			         var s = parseInt(p[i].style.fontSize.replace("px",""));
+			      } else {
+			         var s = 12;
+			      }
+			      if(s!=max) {
+			         s += 1;
+			      }
+			      p[i].style.fontSize = s+"px"
+			   }
+			}
+			function decreaseFontSize() {
+			   var p = document.getElementsByTagName('p');
+			   for(i=0;i<p.length;i++) {
+			      if(p[i].style.fontSize) {
+			         var s = parseInt(p[i].style.fontSize.replace("px",""));
+			      } else {
+			         var s = 12;
+			      }
+			      if(s!=min) {
+			         s -= 1;
+			      }
+			      p[i].style.fontSize = s+"px"
+			   }   
+			}
+		
+		</script>
+
+	</head>
+	<body>
+	
+		<div>
+			<a href="javascript:decreaseFontSize();">Decrease font size (-)</a> 
+			<a href="javascript:increaseFontSize();">Increase font size (+)</a>
+		</div>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacus dolor, iaculis in sodales at, gravida in mauris. Aenean fringilla, urna non luctus scelerisque, velit risus facilisis erat, at aliquet est ligula vehicula turpis. Fusce ullamcorper magna nec purus placerat quis accumsan est hendrerit. In hac habitasse platea dictumst. Mauris sodales tristique sagittis. Proin congue, orci eu pulvinar placerat, odio lorem auctor arcu, at suscipit enim mi non neque. Fusce sit amet placerat turpis. Nunc dictum risus sed enim tempus feugiat. Morbi sed ligula in quam consectetur auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		
+		<p>Morbi luctus pellentesque odio eu molestie. Nunc accumsan mollis orci in interdum. Duis sed dui leo. Vestibulum sollicitudin elementum vestibulum. Donec sollicitudin aliquet venenatis. Nulla facilisi. Maecenas dolor massa, eleifend nec vulputate vel, pulvinar ut sapien. Aliquam sagittis tortor ut tellus fermentum consectetur. Nunc dapibus vestibulum tincidunt. Fusce eget egestas lectus. Sed sodales tincidunt vulputate. In vulputate dolor et felis gravida posuere. Nulla et faucibus neque.</p>
+		
+		<p>Donec neque mi, rutrum id ultrices at, porttitor vel sem. Maecenas viverra egestas vestibulum. Proin pulvinar erat vitae dolor lacinia dapibus. Nullam vel cursus quam. Donec sit amet neque metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean porttitor dignissim quam nec tempus. Aliquam erat volutpat. In vitae dui lectus. Praesent eros odio, bibendum sed lacinia non, dapibus pretium tellus. Maecenas ultricies luctus tempor. Nam enim massa, fringilla in elementum non, faucibus a orci. Pellentesque faucibus velit ut dui semper eu tempor ante eleifend. Maecenas cursus purus non massa laoreet ac congue tortor fermentum. Praesent enim eros, mattis id ornare a, tincidunt eu nulla. Etiam placerat condimentum ultricies. Vestibulum dictum accumsan vulputate. In luctus pellentesque feugiat.</p>
+		
+		<p>Nulla nec ante ac nisl adipiscing condimentum at vitae risus. Vestibulum mollis molestie urna eu ultrices. Phasellus vitae felis lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non tincidunt velit. Mauris placerat, risus nec rutrum cursus, odio mi pellentesque justo, dictum eleifend justo quam eget mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies, ante in pellentesque cursus, orci leo hendrerit turpis, et mattis massa sapien eu erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis consectetur rhoncus diam, a fermentum purus porttitor eget. Mauris laoreet orci vel ipsum convallis id volutpat lorem placerat.</p>
+		
+		<p>Nulla pretium pellentesque libero, ut gravida justo ullamcorper at. Vivamus ullamcorper convallis arcu, eget lobortis dolor molestie in. Aliquam erat volutpat. Fusce non tortor nec nulla egestas congue. Vestibulum a rhoncus mi. Quisque at lacinia purus. Aliquam sagittis pulvinar accumsan. Donec in libero non ante imperdiet congue. Donec rutrum facilisis lacus eu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed et venenatis est. Nunc vulputate neque ut quam adipiscing id elementum nunc facilisis. Nunc tincidunt viverra nibh, eu consequat enim porta consequat. Donec nunc lacus, consequat eget malesuada sed, gravida bibendum lectus.</p>
+		
+
+	</body>
+</html>
